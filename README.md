@@ -3,7 +3,7 @@
 李嘉伟 / Mastershot Studio 作品集网站的完整静态源码。没有构建步骤，改完直接提交，GitHub Pages 自动更新。
 
 - **GitHub Pages 地址（建好后）**：<https://jasonjoingithub.github.io/mastershot/>
-- **自定义域名（可选）**：`mastershot.film`（推荐，当前可注册）
+- **自定义域名**：`mastershot.cc`（已注册并绑定）
 
 ---
 
@@ -58,7 +58,7 @@
 
 `Mastershot.com` 已被注册（1998 年起），无法直接注册。当前可注册、适合这个站的有：
 
-- **mastershot.film**（推荐，短、贴合电影）
+- **mastershot.cc**（当前使用）
 - **mastershotfilm.com**（想要 .com 的话）
 - mastershot.design / mastershot.tv
 
