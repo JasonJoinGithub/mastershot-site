@@ -269,3 +269,39 @@ section[id] { scroll-margin-top:96px; }
 @media (max-width:800px) {
   .trilogy h2 { font-size:clamp(34px,9.8vw,44px); line-height:1.05; }
 }
+
+/* 22. Mobile hero: fit the MASTERSHOT wordmark, use a 2x2 poster wall instead of
+   four squeezed vertical slices, and keep the headline inside the viewport. */
+@media (max-width:800px) {
+  .hero-filmstrip {
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+    grid-template-rows:repeat(2,minmax(0,1fr)) !important;
+  }
+  .hero-filmstrip span,
+  .hero-filmstrip span:nth-child(-n+3) {
+    background-size:cover !important;
+    background-position:center 30% !important;
+  }
+  .hero-wordmark {
+    top:17% !important;
+    left:0 !important;
+    width:100vw !important;
+    transform:none !important;
+    overflow:hidden !important;
+  }
+  .hero-wordmark span {
+    font-size:clamp(36px,12.4vw,64px) !important;
+    letter-spacing:.005em !important;
+    text-indent:.005em !important;
+    line-height:.95 !important;
+  }
+  .hero-content { padding-top:27vh !important; }
+  .hero h1 {
+    font-size:clamp(32px,9.6vw,46px) !important;
+    line-height:1.06 !important;
+    letter-spacing:-.045em !important;
+    margin-top:24px !important;
+    margin-bottom:18px !important;
+  }
+  .hero-intro { font-size:14px !important; }
+}
