@@ -405,3 +405,17 @@ section[id] { scroll-margin-top:96px; }
   .directing-poster { width:min(240px,100%); margin:0 auto; }
   .directing-body h3 { font-size:30px; }
 }
+
+/* 28. Director experience: three concise capability cards, music included. */
+.directing-experience { grid-template-columns:repeat(3,minmax(0,1fr)); }
+.directing-experience > div { padding:28px 24px 28px 0; }
+.directing-experience > div + div { padding-left:24px; border-left:1px solid var(--line); }
+.directing-experience h3 { font-size:22px; margin:10px 0 12px; }
+.directing-experience p { font-size:13px; line-height:1.7; }
+.directing-credit-line { color:rgba(242,240,233,.55) !important; font-size:12px !important; line-height:1.65 !important; }
+.directing-credit-line strong { color:var(--paper); }
+@media(max-width:1000px) {
+  .directing-experience { grid-template-columns:1fr; }
+  .directing-experience > div { padding:22px 0; }
+  .directing-experience > div + div { padding-left:0; border-left:0; border-top:1px solid var(--line); }
+}
