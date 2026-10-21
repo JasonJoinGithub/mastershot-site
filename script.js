@@ -377,7 +377,7 @@ $(".brand").addEventListener("click", event => { event.preventDefault(); setMenu
 $$(".main-nav a").forEach(link => link.addEventListener("click", () => setMenu(false)));
 const navPreviewImage = $("#nav-preview-image");
 const navPreviewLabel = $("#nav-preview-label");
-const navPreviewNames = { HOME:"MASTER SHOT / 首页", WORK:"SELECTED WORK / 代表作品", APPROACH:"EDITORIAL APPROACH / 创作方法", ABOUT:"LI JIAWEI / 关于李嘉伟", CONTACT:"CONTACT / 合作联系" };
+const navPreviewNames = { HOME:"MASTER SHOT / 首页", DIRECTING:"DIRECTING / 导演", WORK:"SELECTED WORK / 代表作品", APPROACH:"EDITORIAL APPROACH / 创作方法", ABOUT:"LI JIAWEI / 关于李嘉伟", CONTACT:"CONTACT / 合作联系" };
 $$('.nav-links a').forEach(link => {
   const preview = () => {
     navPreviewImage.src = link.dataset.preview;
