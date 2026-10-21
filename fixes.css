@@ -332,3 +332,36 @@ section[id] { scroll-margin-top:96px; }
     text-align:left;
   }
 }
+
+/* 24. Directing: original scripts, director's statement, and the two features in development. */
+.directing { padding:110px 0 100px; border-top:1px solid var(--line); }
+.directing-head { display:grid; grid-template-columns:1fr 1fr; gap:64px; margin-top:48px; align-items:start; }
+.directing-head h2 { margin:0; font-size:clamp(42px,5.2vw,78px); line-height:.98; letter-spacing:-.075em; font-weight:600; }
+.directing-head h2 i { color:var(--acid); font-style:normal; }
+.directing-statement { margin:0; max-width:540px; color:rgba(242,240,233,.72); font-size:16px; line-height:1.8; }
+.directing-statement strong { color:var(--paper); font-weight:500; }
+.directing-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:54px; }
+.directing-card { border:1px solid var(--line); padding:30px; background:rgba(255,255,255,.025); display:flex; flex-direction:column; }
+.directing-card-top { display:flex; justify-content:space-between; align-items:center; gap:16px; }
+.directing-status { font:10px "DM Mono",monospace; letter-spacing:.12em; color:var(--acid); text-transform:uppercase; }
+.directing-card h3 { margin:24px 0 4px; font-size:clamp(30px,3vw,44px); line-height:1; letter-spacing:-.05em; }
+.directing-en { margin:0 0 18px; font:11px "DM Mono",monospace; letter-spacing:.14em; color:var(--muted); text-transform:uppercase; }
+.directing-meta { margin:0 0 6px; color:var(--acid); font:11px "DM Mono",monospace; letter-spacing:.06em; }
+.directing-credit { margin:0 0 20px; color:rgba(242,240,233,.55); font:11px "DM Mono",monospace; letter-spacing:.02em; }
+.directing-logline { margin:0; color:rgba(242,240,233,.8); font-size:15px; line-height:1.8; }
+.directing-logline + .directing-logline { margin-top:12px; }
+.directing-note { margin-top:24px; padding-top:16px; border-top:1px solid var(--line); color:rgba(242,240,233,.45); font:11px "DM Mono",monospace; letter-spacing:.04em; }
+.section-caption { margin:10px 0 0; color:rgba(242,240,233,.5); font-size:12px; line-height:1.6; }
+.section-caption a { color:var(--acid); border-bottom:1px solid rgba(201,217,120,.4); }
+.about-directing { margin-top:18px !important; color:var(--acid) !important; font-size:14px !important; line-height:1.6; }
+.credits-note { margin-top:18px; color:rgba(242,240,233,.45); font-size:11px; line-height:1.6; }
+@media(max-width:800px) {
+  .directing { padding:80px 0; }
+  .directing-head { grid-template-columns:1fr; gap:26px; margin-top:36px; }
+  .directing-head h2 { font-size:clamp(36px,10.5vw,54px); }
+  .directing-statement { font-size:15px; }
+  .directing-grid { grid-template-columns:1fr; gap:12px; margin-top:36px; }
+  .directing-card { padding:22px; }
+  .directing-card h3 { font-size:32px; }
+  .directing-logline { font-size:14px; }
+}
