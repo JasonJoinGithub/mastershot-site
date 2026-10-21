@@ -355,6 +355,22 @@ document.addEventListener("keydown", event => {
   }
 });
 $("#year").textContent = new Date().getFullYear();
+const introGallery = $("#intro-gallery");
+if (introGallery) {
+  const galleryPrev = $("#gallery-prev");
+  const galleryNext = $("#gallery-next");
+  const galleryStep = () => Math.max(260, introGallery.clientWidth * 0.9);
+  const updateGallery = () => {
+    if (galleryPrev) galleryPrev.disabled = introGallery.scrollLeft <= 4;
+    if (galleryNext) galleryNext.disabled = introGallery.scrollLeft + introGallery.clientWidth >= introGallery.scrollWidth - 4;
+  };
+  galleryPrev?.addEventListener("click", () => introGallery.scrollBy({ left: -galleryStep(), behavior: "smooth" }));
+  galleryNext?.addEventListener("click", () => introGallery.scrollBy({ left: galleryStep(), behavior: "smooth" }));
+  introGallery.addEventListener("scroll", updateGallery, { passive: true });
+  window.addEventListener("resize", updateGallery);
+  updateGallery();
+}
+
 const heroIndex = $(".hero-index");
 if (heroIndex) heroIndex.textContent = `001 / ${String(SITE.projects.length).padStart(3, "0")}`;
 syncFromHash();
