@@ -365,3 +365,26 @@ section[id] { scroll-margin-top:96px; }
   .directing-card h3 { font-size:32px; }
   .directing-logline { font-size:14px; }
 }
+
+/* 25. Director's experience: on-set, post-direction, and Previz credits. */
+.about-experience { margin-top:10px !important; color:rgba(242,240,233,.62) !important; font-size:14px !important; line-height:1.7; }
+.directing-experience-label { margin:42px 0 0; color:var(--muted); font:10px "DM Mono",monospace; letter-spacing:.14em; text-transform:uppercase; }
+.directing-experience { display:grid; grid-template-columns:1fr 1fr; gap:0; margin-top:18px; border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+.directing-experience > div { padding:28px 32px 30px 0; }
+.directing-experience > div + div { padding-left:32px; border-left:1px solid var(--line); }
+.directing-experience h3 { margin:10px 0 14px; font-size:24px; line-height:1.05; letter-spacing:-.04em; }
+.directing-experience p { margin:0 0 10px; color:rgba(242,240,233,.7); font-size:14px; line-height:1.75; }
+.directing-experience p:last-child { margin-bottom:0; }
+.directing-experience strong { color:var(--paper); font-weight:500; }
+@media(max-width:800px) {
+  .directing-experience { grid-template-columns:1fr; }
+  .directing-experience > div { padding:24px 0; }
+  .directing-experience > div + div { padding-left:0; border-left:0; border-top:1px solid var(--line); }
+  .directing-experience h3 { font-size:22px; }
+}
+
+/* 26. Mobile work heading: keep the new caption on its own line. */
+@media (max-width:800px) {
+  .section-heading { display:block; }
+  .section-caption { margin-top:10px; }
+}
