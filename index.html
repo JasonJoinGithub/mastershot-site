@@ -25,9 +25,9 @@
     <link rel="preload" as="image" href="assets/opt/img-003.webp" />
     <link rel="preload" as="image" href="assets/opt/img-004.webp" />
     <link rel="preload" href="assets/fonts/arimo-latin-700.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="stylesheet" href="styles.css?v=20261021-1900" />
-    <link rel="stylesheet" href="blur.css?v=20261021-1900" />
-    <link rel="stylesheet" href="fixes.css?v=20261021-1900" />
+    <link rel="stylesheet" href="styles.css?v=20261021-2000" />
+    <link rel="stylesheet" href="blur.css?v=20261021-2000" />
+    <link rel="stylesheet" href="fixes.css?v=20261021-2000" />
   </head>
   <body class="splash-lock">
     <div class="page-progress" aria-hidden="true"><span id="page-progress-bar"></span></div>
@@ -100,7 +100,17 @@
             <div class="stat-row"><div><strong>16</strong><span>电影与剧集项目</span></div><div><strong>双语</strong><span>跨地区制作协作</span></div><div><strong>01</strong><span>电影叙事与导演开发</span></div></div>
           </div>
         </div>
-        <div class="intro-gallery" aria-label="李嘉伟工作现场与创作记录">
+        <div class="gallery-head">
+          <span class="gallery-label">WORKING ARCHIVE / 工作现场</span>
+          <div class="gallery-nav" aria-label="工作照切换">
+            <button class="gallery-btn" id="gallery-prev" type="button" aria-label="上一张工作照" aria-controls="intro-gallery" disabled>←</button>
+            <button class="gallery-btn" id="gallery-next" type="button" aria-label="下一张工作照" aria-controls="intro-gallery">→</button>
+          </div>
+        </div>
+        <div class="intro-gallery" id="intro-gallery" aria-label="李嘉伟工作现场与创作记录">
+          <figure><img src="assets/opt/gallery-onsite.webp" alt="李嘉伟在拍摄现场与导演组一起看笔记本电脑" loading="lazy"><figcaption>ON SET / 导演组现场</figcaption></figure>
+          <figure><img src="assets/opt/gallery-set.webp" alt="黄昏下的蓝幕外景、摇臂与现场工作人员" loading="lazy"><figcaption>ON SET / 大场面拍摄</figcaption></figure>
+          <figure><img src="assets/opt/gallery-screening.webp" alt="后期审片室中的投影幕与工作台" loading="lazy"><figcaption>POST / 后期审片</figcaption></figure>
           <figure><img src="assets/opt/img-007.webp" alt="剪辑工作现场" loading="lazy"><figcaption>EDITORIAL / 剪辑现场</figcaption></figure>
           <figure><img src="assets/opt/img-008.webp" alt="团队工作记录" loading="lazy"><figcaption>COLLABORATION / 团队协作</figcaption></figure>
           <figure><img src="assets/opt/img-009.webp" alt="个人创作记录" loading="lazy"><figcaption>PROCESS / 创作记录</figcaption></figure>
@@ -243,7 +253,7 @@
       <button class="trailer-modal-arrow trailer-modal-next" id="trailer-modal-next" type="button" aria-label="下一个项目">›</button>
       <div class="trailer-modal-caption"><span id="trailer-modal-title"></span><span id="trailer-modal-meta"></span></div>
     </section>
-    <script src="content.js?v=20261021-1900"></script>
-    <script src="script.js?v=20261021-1900"></script>
+    <script src="content.js?v=20261021-2000"></script>
+    <script src="script.js?v=20261021-2000"></script>
   </body>
 </html>
