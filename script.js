@@ -6,7 +6,7 @@ function createCard(project) {
   card.className = "work-card";
   card.dataset.tags = project.tags.join(" ");
   card.dataset.id = project.id;
-  card.innerHTML = `<img src="${project.poster}" alt="${project.title} 海报" loading="lazy" decoding="async"><div class="card-preview" aria-hidden="true"><div class="card-preview-media"><img src="${project.poster}" alt=""></div><button class="card-preview-play" type="button" aria-label="播放 ${project.title}">▶</button><span class="card-preview-label">PREVIEW / 预览</span></div><button class="play-hint" type="button">${project.trailer ? "▶ 预告片" : "项目详情"}</button><div class="work-card-content"><span class="type">${project.type}</span><h3>${project.title}</h3><p>${project.director ? `导演：${project.director}` : ""}${project.director && project.year ? " · " : ""}${project.year}</p><p class="role">${project.role}</p></div>`;
+  card.innerHTML = `<img src="${project.poster}" alt="${project.title} 海报" loading="lazy" decoding="async"><div class="card-preview" aria-hidden="true"><div class="card-preview-media"><img src="${project.poster}" alt="" loading="lazy" decoding="async"></div><button class="card-preview-play" type="button" tabindex="-1" aria-label="播放 ${project.title}">▶</button><span class="card-preview-label">PREVIEW / 预览</span></div><button class="play-hint" type="button">${project.trailer ? "▶ 预告片" : "项目详情"}</button><div class="work-card-content"><span class="type">${project.type}</span><h3>${project.title}</h3><p>${project.director ? `导演：${project.director}` : ""}${project.director && project.year ? " · " : ""}${project.year}</p><p class="role">${project.role}</p></div>`;
   card.querySelector(".play-hint")?.addEventListener("click", event => {
     event.stopPropagation();
     project.trailer ? openPlayback(project, card) : openProject(project, card);
@@ -59,7 +59,7 @@ function openPlayback(project, returnCard = null) {
   playbackState = {
     scrollY:window.scrollY,
     activeElement:returnCard || document.activeElement,
-    projects:SITE.projects.filter(item => item.trailer),
+    projects:[...SITE.projects, ...SITE.otherProjects].filter(item => item.trailer),
     index:0,
     projectViewOpen:$("#project-view").classList.contains("is-open"),
     projectViewScroll:$("#project-view-scroll").scrollTop
@@ -329,7 +329,7 @@ $$('.trilogy-card').forEach(card => {
   card.addEventListener('keydown', event => { if (event.key === "Enter" || event.key === " ") { event.preventDefault(); open(); } });
 });
 
-$$('.filter').forEach(button => button.addEventListener('click', () => { $$('.filter').forEach(item => item.classList.remove('is-active')); button.classList.add('is-active'); renderProjects(button.dataset.filter); }));
+$$('.filter').forEach(button => button.addEventListener('click', () => { $$('.filter').forEach(item => { item.classList.remove('is-active'); item.setAttribute('aria-pressed', 'false'); }); button.classList.add('is-active'); button.setAttribute('aria-pressed', 'true'); renderProjects(button.dataset.filter); }));
 $("#project-home").addEventListener("click", () => { closeProject(); window.scrollTo({ top: 0, behavior: "smooth" }); });
 $("#project-close-x")?.addEventListener("click", () => { closeProject(); });
 $(".project-logo").addEventListener("click", event => { event.preventDefault(); closeProject(); window.scrollTo({ top: 0, behavior: "smooth" }); });
