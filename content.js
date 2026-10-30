@@ -81,7 +81,7 @@ const SITE = {
     {
       "id": "vol-3",
       "title": "志愿军：浴血和平",
-      "year": "待上映",
+      "year": "2025-09-30 上映",
       "director": "陈凯歌",
       "type": "史诗 / 战争",
       "tags": [
