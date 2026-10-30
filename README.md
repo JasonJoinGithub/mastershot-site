@@ -2,7 +2,7 @@
 
 李嘉伟 / Mastershot Studio 作品集网站的完整静态源码。没有构建步骤，改完直接提交，GitHub Pages 自动更新。
 
-- **GitHub Pages 地址（建好后）**：<https://jasonjoingithub.github.io/mastershot/>
+- **GitHub Pages 地址（建好后）**：<https://jasonjoingithub.github.io/mastershot-site/>
 - **自定义域名**：`mastershot.cc`（已注册并绑定）
 
 ---
@@ -10,7 +10,7 @@
 ## 一、一次性发布（5 步，网页操作，不用装软件）
 
 1. 登录 GitHub，打开 <https://github.com/new>
-2. 仓库名填 `mastershot`，选 **Public**，点 **Create repository**
+2. 仓库名填 `mastershot-site`，选 **Public**，点 **Create repository**
 3. 在空仓库页点 **uploading an existing file**；把本文件夹里的**所有内容**拖进去  
    （要看到 `index.html` 在仓库最外层，不要把它套在子文件夹里）
 4. 点 **Commit changes**
@@ -21,7 +21,7 @@
 
 等 1–2 分钟，打开：
 
-**https://jasonjoingithub.github.io/mastershot/**
+**https://jasonjoingithub.github.io/mastershot-site/**
 
 手机和电脑用同一个网址，不需要另外做手机版。
 
@@ -48,7 +48,7 @@
 
 改 `fixes.css` 或 `script.js` 后，把 `index.html` 末尾的版本号改一下，例如：
 
-`fixes.css?v=20261019-2330` → `fixes.css?v=20261019-2400`
+`fixes.css?v=20261021-2300` → `fixes.css?v=20261021-2400`
 
 这样浏览器不会继续用旧缓存。
 
@@ -98,6 +98,13 @@ GitHub Pages 服务器在美国，不需要 ICP 备案；域名本身需要实�
 
 ---
 
-## 六、版权说明
+## 六、当前已知问题
+
+- **HTTPS**：GitHub Pages 自定义域名证书一直未签发完成，`https://mastershot.cc` 不可用；当前使用 `http://mastershot.cc`。
+- **ICP 提示**：网站托管在海外 GitHub Pages，没有 ICP 备案，部分国内浏览器/微信会提示“未完成 ICP 备案”，点“继续访问”可打开。
+- **B 站播放器**：预告片使用 B 站外链，播放器接口与画质受 B 站限制。
+- **样式补丁**：`blur.css` + `fixes.css` 有较多 `!important` 覆盖，后续大改样式前建议先整理。
+
+## 七、版权说明
 
 海报、剧照版权归原片方所有，仅用于李嘉伟个人作品集展示。公开仓库如不希望展示原图，可改为私有仓库 + 付费 Pages，或只保留个人工作照。
