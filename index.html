@@ -6,6 +6,8 @@
     <meta name="theme-color" content="#0c0d0d" />
     <meta name="description" content="李嘉伟，导演方向、剪辑指导。原创电影剧本《瓦良格号》开发中、《入土为安》已进入创投阶段；剪辑作品包括《志愿军》三部曲、太平轮·彼岸、寻龙诀、新喜剧之王等。" />
     <title>李嘉伟 / 导演方向 · 剪辑指导 — Mastershot Studio</title>
+    <link rel="canonical" href="http://mastershot.cc/" />
+    <meta property="og:url" content="http://mastershot.cc/" />
     <link rel="icon" href="assets/favicon/favicon.ico" sizes="any" />
     <link rel="icon" type="image/png" href="assets/favicon/favicon-32.png" sizes="32x32" />
     <link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png" />
@@ -13,23 +15,24 @@
     <meta property="og:site_name" content="Mastershot Studio" />
     <meta property="og:title" content="李嘉伟 / 导演方向 · 剪辑指导 — Mastershot Studio" />
     <meta property="og:description" content="李嘉伟，导演方向、剪辑指导。原创电影剧本《瓦良格号》开发中、《入土为安》已进入创投阶段；剪辑作品包括《志愿军》三部曲、太平轮·彼岸、寻龙诀、新喜剧之王等。" />
-    <meta property="og:image" content="assets/share/og-cover.jpg" />
+    <meta property="og:image" content="http://mastershot.cc/assets/share/og-cover.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="李嘉伟 / 导演方向 · 剪辑指导 — Mastershot Studio" />
     <meta name="twitter:description" content="李嘉伟，导演方向、剪辑指导。原创电影剧本《瓦良格号》开发中、《入土为安》已进入创投阶段；剪辑作品包括《志愿军》三部曲、太平轮·彼岸、寻龙诀、新喜剧之王等。" />
-    <meta name="twitter:image" content="assets/share/og-cover.jpg" />
+    <meta name="twitter:image" content="http://mastershot.cc/assets/share/og-cover.jpg" />
     <link rel="preload" as="image" href="assets/opt/img-001.webp" />
     <link rel="preload" as="image" href="assets/opt/img-002.webp" />
     <link rel="preload" as="image" href="assets/opt/img-003.webp" />
     <link rel="preload" as="image" href="assets/opt/img-004.webp" />
     <link rel="preload" href="assets/fonts/arimo-latin-700.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="stylesheet" href="styles.css?v=20261021-2200" />
-    <link rel="stylesheet" href="blur.css?v=20261021-2200" />
-    <link rel="stylesheet" href="fixes.css?v=20261021-2200" />
+    <link rel="stylesheet" href="styles.css?v=20261021-2300" />
+    <link rel="stylesheet" href="blur.css?v=20261021-2300" />
+    <link rel="stylesheet" href="fixes.css?v=20261021-2300" />
   </head>
   <body class="splash-lock">
+    <noscript><style>#splash-screen{display:none!important}body.splash-lock{overflow:auto!important}</style></noscript>
     <div class="page-progress" aria-hidden="true"><span id="page-progress-bar"></span></div>
     <section class="splash-screen" id="splash-screen" aria-label="Mastershot Studio opening">
       <div class="splash-wordmark" aria-label="MASTERSHOT">MASTERSHOT</div>
@@ -49,7 +52,7 @@
           <a href="#about" data-preview="assets/opt/img-004.webp">ABOUT</a>
           <a href="#contact" data-preview="assets/opt/img-010.webp">CONTACT</a>
         </div>
-        <aside class="nav-feature" aria-live="polite">
+        <aside class="nav-feature">
           <div class="nav-preview"><img id="nav-preview-image" src="assets/opt/img-002.webp" alt="项目预览"><span id="nav-preview-label">SELECTED WORK / 代表作品</span></div>
           <div class="nav-info">
             <p class="nav-info-title">LI JIAWEI / 李嘉伟</p>
@@ -184,12 +187,12 @@
           <div class="section-label"><span>03</span><span>EDITORIAL / 剪辑作品</span></div>
           <p class="section-caption">以下为剪辑指导作品；导演项目见 <a href="#directing">DIRECTING / 导演</a>。</p>
         </div>
-        <div class="filter-row" role="tablist" aria-label="作品筛选">
-          <button class="filter is-active" data-filter="all" type="button">全部</button>
-          <button class="filter" data-filter="epic" type="button">史诗 / 战争</button>
-          <button class="filter" data-filter="action" type="button">动作 / VFX</button>
-          <button class="filter" data-filter="emotion" type="button">情感叙事</button>
-          <button class="filter" data-filter="series" type="button">剧集 / TVC</button>
+        <div class="filter-row" role="group" aria-label="作品筛选">
+          <button class="filter is-active" data-filter="all" type="button" aria-pressed="true">全部</button>
+          <button class="filter" data-filter="epic" type="button" aria-pressed="false">史诗 / 战争</button>
+          <button class="filter" data-filter="action" type="button" aria-pressed="false">动作 / VFX</button>
+          <button class="filter" data-filter="emotion" type="button" aria-pressed="false">情感叙事</button>
+          <button class="filter" data-filter="series" type="button" aria-pressed="false">剧集 / TVC</button>
         </div>
         <div class="work-grid" id="work-grid"></div>
         <noscript><p style="color:#8d8b84;font-size:13px">请开启 JavaScript 以查看完整作品列表。</p></noscript>
@@ -253,7 +256,14 @@
       <button class="trailer-modal-arrow trailer-modal-next" id="trailer-modal-next" type="button" aria-label="下一个项目">›</button>
       <div class="trailer-modal-caption"><span id="trailer-modal-title"></span><span id="trailer-modal-meta"></span></div>
     </section>
-    <script src="content.js?v=20261021-2200"></script>
-    <script src="script.js?v=20261021-2200"></script>
+    <script>
+      window.setTimeout(function () {
+        var splash = document.getElementById("splash-screen");
+        if (splash) splash.style.display = "none";
+        document.body.classList.remove("splash-lock");
+      }, 4000);
+    </script>
+    <script src="content.js?v=20261021-2300"></script>
+    <script src="script.js?v=20261021-2300"></script>
   </body>
 </html>
